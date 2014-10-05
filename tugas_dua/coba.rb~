@@ -1,0 +1,26 @@
+class Players
+  attr_accessor :name, :manna, :blood
+  def initialize(name)
+    @name = name
+    @blood = 100
+    @manna = 40
+  end
+
+  def disp_name
+    return @name
+  end
+
+  def disp_blood
+    return @blood
+  end	
+
+  def disp_manna
+    return @manna
+  end
+		
+  player = Players.new('Tosmic')
+  puts "Name: " + player.disp_name
+  puts "Blood: " + player.disp_blood.to_s
+  puts "Manna: " + player.disp_manna.to_s
+end
+

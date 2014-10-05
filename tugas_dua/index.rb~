@@ -1,0 +1,36 @@
+require_relative 'player'
+class Index
+	menu = nil
+	if(menu != "exit")
+		puts "#=====================================================#"
+    		puts "#              Welcome to Battle Arena                #"
+    		puts "#-----------------------------------------------------#"
+    		puts "#    Description :                                    #"
+   		puts "#    1. Type 'new' to add character                   #"
+    		puts "#    2. Type 'start' to start the battle              #"
+    		puts "#-----------------------------------------------------#"
+    		puts "#    Current Player :                                 #"
+    		puts "#    -                                                #"
+    		puts "#    * Max Player 2 or 3                              #"
+    		puts "#-----------------------------------------------------#"
+		instance_player = Player.new
+		instance_player.current_players
+		puts "\n"
+		puts "Select Menu : "
+		STDOUT.flush
+		menu = gets.chomp
+		puts "\n"
+	
+		#Menu Pilihan
+		if menu == "new"
+			instance_player.add_player
+		elsif menu == "start"
+			instance_player.battle_on
+		elsif menu == "exit"
+			puts "See You"
+		else
+			puts "ATTENTION : You need to choose a menu!!!"
+		end
+	end
+end
+

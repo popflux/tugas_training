@@ -1,0 +1,37 @@
+class Players2
+
+  #setter
+  def set_name=(name)
+    @name = name
+  end
+
+  def set_blood=(blood)
+    @blood = blood
+  end
+
+  def set_manna=(manna)
+    @manna = manna
+  end
+
+  def disp_name
+    return @name
+  end
+
+  def disp_blood
+    return @blood
+  end	
+
+  def disp_manna
+    return @manna
+  end
+end
+		
+  player1 = Players2.new
+  player1.set_name = "ariq"
+  player1.set_blood = 100
+  player1.set_manna = 40
+
+  puts "Name: " + player1.disp_name
+  puts "Blood: " + player1.disp_blood.to_s
+  puts "Manna: " + player1.disp_manna.to_s
+

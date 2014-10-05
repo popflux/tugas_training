@@ -1,0 +1,32 @@
+class Player
+attr_accessor :name, :blood, :manna
+def initialize
+@name = %w[]
+@blood = []
+@manna = []
+end
+def add_stats(name)
+@name << name
+@blood = 100
+@manna = 40
+end
+def add_player
+print "Input nama: "
+new_name = gets.chomp
+
+check = @name.include? new_name
+if (check == false) 
+@name << new_name
+@blood << 100
+@manna << 40
+puts "Selamat, anda telah sukses membuat pemain" 
+else
+puts "Nama telah terpakai!!!"
+end
+end
+end
+player = Player.new
+player.add_player
+puts player.name
+puts player.blood
+puts player.blood

@@ -1,0 +1,64 @@
+class Player
+attr_accessor :name, :blood, :manna
+def initialize (*name)
+@name = Array.new(name)
+@blood = 100
+@manna = []
+@count = @name.count + 1
+end
+def add_stats(name)
+@name << name
+@blood = 100
+@manna = 40
+end
+def self.cek_class
+puts @name.class
+puts @blood.class
+end
+def self.player_count
+puts @count
+end
+def check(name)
+@name.include? name
+end
+def self.hasil_name
+puts @name
+end
+def form_name
+puts "\n#-----------------------------------------------------#"
+puts "#                    ADD PLAYER                       #"
+puts "#-----------------------------------------------------#"
+print "     Input nama: "
+STDOUT.flush
+new_name = gets.chomp
+#cek apakah nama telah terpakai
+check = @name.include? new_name
+if (check == false) 
+@name << new_name
+@blood << 100
+@manna << 40
+puts '','     <SELAMAT, ANDA TELAH SUKSES MEMBUAT PEMAIN>','' 
+else
+puts '','     <MAAF, NAMA TERSEBUT TELAH TERPAKAI!!!>',''
+end
+end
+end
+
+Player.cek_class
+Player.hasil_name
+=begin
+player = Player.new
+print "     Input nama: "
+STDOUT.flush
+new_name = gets.chomp
+#cek apakah nama telah terpakai
+check = player.check(new_name)
+if (check == false) 
+player.add_stats(new_name)
+puts '','     <Selamat, anda telah sukses membuat pemain>','' 
+else
+puts "Nama telah terpakai!!!"
+end
+
+puts Player.hasil_name
+=end 

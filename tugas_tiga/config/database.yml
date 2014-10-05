@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: tugas_tiga_development
+  pool: 5
+  username: postgres
+  password: molkomolko
+
+  test:
+  adapter: postgresql
+  encoding: utf8
+  database: tugas_tiga_test
+  pool: 5
+  username: postgres
+  password: molkomolko

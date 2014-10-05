@@ -1,0 +1,43 @@
+class Players2
+  #constructor
+  def initialize(name)
+    @name = name
+    @blood = 100
+    @manna = 40
+  end
+  
+  #setter
+  def set_name=(name)
+    @name = name
+  end
+
+  #getter
+  def disp_name
+    return @name
+  end
+
+  def disp_blood
+    return @blood
+  end	
+
+  def disp_manna
+    return @manna
+  end
+
+
+end
+  
+  #creating an object		
+  player2 = Players2.new('tosmic')
+   
+  #using setter
+  player2.set_name='andri'
+
+  a = player2.disp_name
+  b = player2.disp_blood
+  c = player2.disp_manna
+
+  puts "Name: #{a}"
+  puts "Blood: #{b}"  
+  puts "Manna: #{c}"
+

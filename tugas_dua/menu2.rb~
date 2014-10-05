@@ -1,0 +1,219 @@
+def factorial(n)
+
+if n < 1
+
+raise “argument must be > 0″
+
+elsif n == 1
+
+1
+
+else
+
+n * factorial(n-1)
+
+end
+
+end
+
+def kalkulator()
+
+puts ‘——KALKULATOR——‘
+
+puts ‘1. Penjumlahan’
+
+puts ‘2. Pengurangan’
+
+puts ‘3. Pembagian’
+
+puts ‘4. Perkalian’
+
+puts ‘5. Keluar’
+
+puts ‘——————‘
+
+puts ‘Masukan Pilihan : ‘
+
+kal = gets
+
+kal.chop!
+
+puts ‘——————‘
+
+if kal.to_i == 1
+
+puts (“—Penjumlahan—“)
+
+puts (“Masukan a : “)
+
+a = gets.to_i
+
+puts (“Masukan b : “)
+
+b = gets.to_i
+
+z = a+b
+
+puts (“Hasilnya Penjumlahan=#{z}”)
+
+elsif kal.to_i == 2
+
+puts (“—Pengurangan—“)
+
+puts (“Masukan a : “)
+
+a = gets.to_i
+
+puts (“Masukan b : “)
+
+b = gets.to_i
+
+z = a-b
+
+puts (“Hasilnya Pengurangan=#{z}”)
+
+elsif kal.to_i == 3
+
+puts (“—Pembagian—“)
+
+puts (“Masukan a : “)
+
+a = gets.to_i
+
+puts (“Masukan b : “)
+
+b = gets.to_i
+
+z = a/b
+
+puts (“Hasilnya Pembagian=#{z}”)
+
+elsif kal.to_i == 4
+
+puts (“—Perkalian—“)
+
+puts (“Masukan a : “)
+
+a = gets.to_i
+
+puts (“Masukan b : “)
+
+b = gets.to_i
+
+z = a*b
+
+puts (“Hasilnya Perkalian=#{z}”)
+
+else kal.to_i == 5
+
+aritmatika()
+
+end
+
+end
+
+def balok()
+
+puts”masukan panjang :”
+
+p = gets.to_i
+
+puts”masukan lebar:”
+
+l = gets.to_i
+
+puts “masukan tinggi:”
+
+t = gets.to_i
+
+z = p*l*t
+
+puts (“Hasilnya volume balok = #{z}”)
+
+end
+
+def kubus()
+
+puts”masukan sisi”
+
+s = gets.to_i
+
+z = s*s*s
+
+puts (“Hasilnya volume kubus = #{z}”)
+
+end
+
+def aritmatika()
+
+puts “<<<<<pilihan>>>>>”
+
+puts “1. volume balok”
+
+puts “2. volume kubus”
+
+puts “3. Kalkulator”
+
+puts “Masukan Pilihan :”
+
+pilihan = gets
+
+pilihan.chop!
+
+if pilihan.to_i == 1
+
+balok()
+
+elsif pilihan.to_i == 2
+
+kubus()
+
+else pilihan.to_i == 3
+
+kalkulator()
+
+end
+
+end
+
+def cetakmenu()
+
+loops = 0
+
+while loops < 1
+
+puts “<<<<<<MENU>>>>>>\n”
+
+puts “1. Factorial\n”
+
+puts “2. Aritmatika\n”
+
+puts “Choice : “
+
+menu = gets
+
+menu.chop!
+
+if menu.to_i == 1
+
+puts “\nMasukkan Nilai faktorial : “
+
+faktorial = gets
+
+faktorial.chop!
+
+puts “Hasilnya #{factorial(faktorial.to_i)}”
+
+puts “\n\n”
+
+else menu.to_i == 2
+
+aritmatika()
+
+end
+
+end
+
+end
+
+cetakmenu()

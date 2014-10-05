@@ -1,0 +1,49 @@
+class Menu
+  #getter
+  attr_reader :length_quit
+
+  def initialize(*menu_args)
+    @menu_args = menu_args
+    @length_quit = @menu_args.length
+  end
+
+  def get_menu_choice
+    puts "#=================================================#"
+    puts "#              Welcome to Battle Arena            #"    
+    puts "#-------------------------------------------------#" 
+
+    @menu_args.each_with_index do |item, index|
+   
+    puts "#{index + 1}. #{item}"
+
+    puts "#-------------------------------------------------#"
+  
+  end
+  
+    puts "Ketik 'new' untuk membuat character"
+    puts "Ketik 'start' untuk memulai pertempuran"
+    puts "Ketik 'quit' untuk keluar dari game"  
+    puts "#-------------------------------------------------#"
+    print "Pilih menu: "
+    menu_choice = gets.to_s
+ 
+    return menu_choice
+
+    end
+
+end
+
+    menu = Menu.new("new", "start", "quit")
+
+    while((choice = menu.get_menu_choice) != menu.length_quit)
+
+      case choice
+
+        when new
+          puts "Ini new"
+        when start
+          puts "ini start"
+        when quit
+          puts "ini quit"
+     end
+end
