@@ -36,6 +36,9 @@ gem 'devise', '~> 3.4.0'
 # paperclip
 gem 'paperclip', '~> 4.2.0'
 
+# masonry-rails
+gem 'masonry-rails', '~> 0.2.1'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
