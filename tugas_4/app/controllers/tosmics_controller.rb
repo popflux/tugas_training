@@ -41,7 +41,7 @@ class TosmicsController < ApplicationController
   end
 
   def tosmic_params
-    params.require(:tosmic).permit(:title)
+    params.require(:tosmic).permit(:title, :image)
   end   
 
   def find_tosmic

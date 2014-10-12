@@ -33,6 +33,9 @@ gem 'simple_form', '~> 3.0.2'
 # devise
 gem 'devise', '~> 3.4.0'
 
+# paperclip
+gem 'paperclip', '~> 4.2.0'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
