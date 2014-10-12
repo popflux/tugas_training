@@ -1,0 +1,50 @@
+<%- model_class = Product -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<%= link_to new_product_path do %>
+<button type="button" class= "btn btn-primary">Add Product</button></a>
+<% end %>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Stock</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.id %></td>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><%= product.category %></td>
+	<td><%= product.stock %></td>
+        <td>
+	  <%= link_to product_path(product),  class: "btn btn-mini" do %>
+    <i class="icon-eye-open">View</i>
+	  <% end %>
+<a class="btn btn-mini" href="#modalEditBarang<?php echo $row->id_brg?>" data-toggle="modal"><i class="icon-pencil"></i> Edit</a>
+	  <%= link_to edit_product_path(product), class: "btn btn-mini" data-toggle="modal" do %>
+    <i class="icon-pencil">Edit</i>
+	  <% end %>
+
+	  <%= link_to edit_product_path(product), class: "btn btn-mini" do %>
+    <i class="icon-pencil">Edit</i>
+	  <% end %>
+
+	  <%= link_to product_path(product), class: "btn btn-mini", :method => :delete, :confirm => "Anda yakin ingin menghapus produk ini?"  do %>
+    <i class="icon-remove">Delete</i>
+	  <% end %>
+	  	
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

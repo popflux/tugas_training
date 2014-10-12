@@ -1,0 +1,4 @@
+class AddColumnCategoryAndStockToProduct < ActiveRecord::Migration
+  def change
+  end
+end
