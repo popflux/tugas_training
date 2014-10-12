@@ -1,0 +1,11 @@
+%h1= @tosmic.title
+%p
+Submitted by
+= @tosmic.user.email
+
+%br/
+
+= link_to "Back", root_path
+= link_to "Edit", edit_tosmic_path
+= link_to "Delete", tosmic_path, method: :delete, data: { confirm: "Anda Yakin Ingin Menghapus?"}
+

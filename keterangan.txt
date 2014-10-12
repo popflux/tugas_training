@@ -1,0 +1,5 @@
+tugas_satu = Bootstrap HTML
+tugas_dua = game ruby
+tugas_4 = duplicating pinterest
+
+* tugas_4 masih dikerjakan
